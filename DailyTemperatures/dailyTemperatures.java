@@ -4,18 +4,18 @@ import java.util.Stack;
 
 public class dailyTemperatures {
     public int[] daysToTemp(int[] temperatures) {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> monotonicStack = new Stack<Integer>();
         int[] daysToTemp = new int[temperatures.length];
         for(int i = temperatures.length - 1; i >= 0; i--) {
-            while(!stack.empty() && temperatures[i] >= temperatures[stack.peek()]) {
-                stack.pop();
+            while(!monotonicStack.empty() && temperatures[i] >= temperatures[monotonicStack.peek()]) {
+                monotonicStack.pop();
             }
-            if(stack.empty()) {
+            if(monotonicStack.empty()) {
                 daysToTemp[i] = 0;
             } else {
-                daysToTemp[i] = stack.peek() - i;
+                daysToTemp[i] = monotonicStack.peek() - i;
             }
-            stack.push(i);
+            monotonicStack.push(i);
         }
         return daysToTemp;
     }
