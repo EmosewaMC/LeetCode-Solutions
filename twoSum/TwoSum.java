@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         List<Integer> list = Arrays.stream(nums).boxed().collect(Collectors.toList());
-        
         for(int i = 0; i < list.size(); i++) {
             int temp = list.get(i);
             list.remove(i);

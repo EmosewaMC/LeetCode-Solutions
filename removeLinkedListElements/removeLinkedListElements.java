@@ -14,7 +14,7 @@ public class removeLinkedListElements {
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
         ListNode temp = head;
-        ListNode prev = null;
+        // ListNode prev = null;
         ListNode next = null;
         while(temp != null) {
             // temp = temp.next;
