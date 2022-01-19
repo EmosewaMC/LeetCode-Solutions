@@ -17,11 +17,12 @@ class DistanceTwoPoints {
     typedef int32_t Radius;
 
   public:
-    vector<int> countPoints(vector< vector<int> > &points, vector< vector<int> > &queries);
+    vector<int> CountPoints(vector< vector<int> > &points, vector< vector<int> > &queries);
     float GetDistance(vector<int> &point, vector<int> &circle);
 
   private:
     static const Cardinal XPosition = 0;
     static const Cardinal YPosition = 1;
     static const Radius radius = 2;
+    static const float squared = 2.0;
 };
